@@ -11,8 +11,11 @@ $(function () {
             dataType: 'json',     //data type script・xmlDocument・jsonなど
         })
             .done(function (response) {
-                $('img').attr('src', response.sprites.back_default);
-                $('.poke').attr('src', response.sprites.front_shiny);
+
+                $('img').attr('src',response.sprites['versions']['generation-v']['black-white'].animated['front_default']);
+
+                // $('img').attr('src', response.sprites.back_default);
+                $('.poke').attr('src', response.sprites['versions']['generation-v']['black-white'].animated['back_default']);
 
 
 
