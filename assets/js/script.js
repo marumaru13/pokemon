@@ -4,18 +4,14 @@ $(function () {
 
         $.ajax({
             url: (`https://pokeapi.co/api/v2/pokemon/${input}`),  //アクセスするURL
-            type: 'get',　　 //post or get
+            type: 'get',   //post or get
             cache: false,        //cacheを使うか使わないかを設定
             dataType: 'json',     //data type script・xmlDocument・jsonなど
         })
             .done(function (response) {
 
-                $('.mon').attr('src',response.sprites['versions']['generation-v']['black-white'].animated['front_default']);
-
                 // $('img').attr('src', response.sprites.back_default);
-                // $('.poke').attr('src', response.sprites['versions']['generation-v']['black-white'].animated['back_default']);
-
-
+                $('.mon').attr('src',response.sprites['versions']['generation-v']['black-white'].animated['front_default']);
 
             })
             .fail(function (xhr) {
@@ -30,22 +26,18 @@ $(function () {
     })
 
     $('.pokepoke').on("click", function () {
-        let inputNum = $('.two').val();
+        let inputNum = $('.second').val();
 
         $.ajax({
             url: (`https://pokeapi.co/api/v2/pokemon/${inputNum}`),  //アクセスするURL
-            type: 'get',　　 //post or get
+            type: 'get',   //post or get
             cache: false,        //cacheを使うか使わないかを設定
             dataType: 'json',     //data type script・xmlDocument・jsonなど
         })
             .done(function (response) {
 
-                // $('img').attr('src',response.sprites['versions']['generation-v']['black-white'].animated['front_default']);
-
                 // $('img').attr('src', response.sprites.back_default);
                 $('.poke').attr('src', response.sprites['versions']['generation-v']['black-white'].animated['back_default']);
-
-
 
             })
             .fail(function (xhr) {

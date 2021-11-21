@@ -1,9 +1,70 @@
-img{
-    width:200px;
-    height:200px;
+section {
+    background-color: rgba(106, 170, 111, 0.541);
 }
 
-.enemy {
+#enemy {
     display: flex;
     justify-content: space-around;
+    height: 350px;
 }
+
+#mypokemon {
+    display: flex;
+    justify-content: space-around;
+    height: 350px;
+}
+
+.aaa{
+    width: 400px;
+    height: 100px;
+    border: 2px solid;
+    background-color: rgb(231, 233, 204);
+    margin-top: 50px;
+
+}
+
+.pokename {
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+}
+
+input {
+    width: 200px;
+    height: 30px;
+    font-size: 30px;
+}
+
+button {
+    width: 20px;
+    height: 37px;
+}
+
+h1 {
+    padding-left: 30px;
+    padding-top: 10px;
+    font-size: 25px;
+}
+
+#hp {
+    background-color: black;
+    width: 260px;
+    height: 15px;
+    display: flex;
+    justify-content: end;
+    margin-left: 130px;
+    margin-top: 20px;
+}
+
+h2 {
+    color: orange;
+}
+
+.line{
+    width: 200px;
+    height: 10px;
+    background-color: greenyellow;
+    margin: 2px 10px;
+}
+
+
