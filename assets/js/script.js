@@ -45,7 +45,14 @@ $(function () {
                 // $('img').attr('src', response.sprites.back_default);
                 $('.poke').attr('src', response.sprites['versions']['generation-v']['black-white'].animated['back_default']);
 
+                
 
+                console.log(response.moves[0]);
+                $('.result').append(response.moves[0].move['name']);
+                $('.result').after(response.moves[1].move['name']);
+                $('.result').after(response.moves[2].move['name']);
+                $('.result').after(response.moves[3].move['name']);
+          
 
             })
             .fail(function (xhr) {
