@@ -9,6 +9,8 @@ $(function () {
             dataType: 'json',     //data type script・xmlDocument・jsonなど
         })
             .done(function (response) {
+                
+                $('.result').text(response.types[0].type['name']);
 
                 $('#q8-btn').one('click', function () {
                     $('.a').append(response.moves[0].move['name']);
@@ -48,6 +50,9 @@ $(function () {
             dataType: 'json',     //data type script・xmlDocument・jsonなど
         })
             .done(function (response) {
+
+                $('.result').text(response.types[0].type['name']);
+
 
                 $('#q9-btn').one('click', function () {
                     $('.e').append(response.moves[0].move['name']);
