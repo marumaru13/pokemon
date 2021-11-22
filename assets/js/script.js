@@ -51,7 +51,7 @@ $(function () {
         })
             .done(function (response) {
 
-                $('.result').text(response.types[0].type['name']);
+                $('.result2').text(response.types[0].type['name']);
 
 
                 $('#q9-btn').one('click', function () {

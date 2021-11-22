@@ -55,6 +55,7 @@ h1 {
     justify-content: end;
     margin-left: 190px;
     margin-top: 20px;
+    /* position: fixed; */
 }
 
 h2 {
@@ -120,6 +121,18 @@ h2 {
 
 .result {
     font-size: 20px;
+    width: 100px;
+    position: fixed;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+.result2 {
+    font-size: 20px;
+    width: 100px;
+    position: fixed;
+    margin-top: 5px;
+    margin-left: 20px;
 }
 
 
