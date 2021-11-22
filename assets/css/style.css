@@ -49,11 +49,11 @@ h1 {
 
 #hp {
     background-color: black;
-    width: 260px;
+    width: 200px;
     height: 15px;
     display: flex;
     justify-content: end;
-    margin-left: 130px;
+    margin-left: 190px;
     margin-top: 20px;
 }
 
@@ -62,7 +62,7 @@ h2 {
 }
 
 .line{
-    width: 200px;
+    width: 140px;
     height: 10px;
     background-color: greenyellow;
     margin: 2px 10px;
@@ -114,7 +114,13 @@ h2 {
       height: 40px;
   }
 
+.type_hp{
+    display: flex;
+}
 
+.result {
+    font-size: 20px;
+}
 
 
 
