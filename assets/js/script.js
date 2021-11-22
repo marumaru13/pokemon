@@ -1,5 +1,5 @@
 $(function () {
-    $('button').one("click", function () {
+    $('button').on("click", function () {
         let input = $('input').val();
 
         $.ajax({
@@ -9,23 +9,25 @@ $(function () {
             dataType: 'json',     //data type script・xmlDocument・jsonなど
         })
             .done(function (response) {
-                
+
                 $('.result').text(response.types[0].type['name']);
 
-                $('#q8-btn').one('click', function () {
-                    $('.a').append(response.moves[0].move['name']);
-                    $('.b').append(response.moves[1].move['name']);
-                    $('.c').append(response.moves[2].move['name']);
-                    $('.d').append(response.moves[3].move['name']);
+                $('.a').append(response.moves[0].move['name']);
+                $('.b').append(response.moves[1].move['name']);
+                $('.c').append(response.moves[2].move['name']);
+                $('.d').append(response.moves[3].move['name']);
+
+                $('#q8-btn').on('click', function () {
+
                     $(this).siblings().animate({
-                      width: 'toggle'
+                        width: 'toggle'
                     })
                 })
 
                 // $('img').attr('src', response.sprites.back_default);
-                $('.mon').attr('src',response.sprites['versions']['generation-v']['black-white'].animated['front_default']);
-                $('.mon').css('width','300px');
-                $('.mon').css('height','300px');
+                $('.mon').attr('src', response.sprites['versions']['generation-v']['black-white'].animated['front_default']);
+                $('.mon').css('width', '300px');
+                $('.mon').css('height', '300px');
 
 
             })
@@ -53,22 +55,22 @@ $(function () {
 
                 $('.result2').text(response.types[0].type['name']);
 
+                $('.e').append(response.moves[0].move['name']);
+                $('.f').append(response.moves[1].move['name']);
+                $('.g').append(response.moves[2].move['name']);
+                $('.h').append(response.moves[3].move['name']);
 
-                $('#q9-btn').one('click', function () {
-                    $('.e').append(response.moves[0].move['name']);
-                    $('.f').append(response.moves[1].move['name']);
-                    $('.g').append(response.moves[2].move['name']);
-                    $('.h').append(response.moves[3].move['name']);
+                $('#q9-btn').on('click', function () {
                     $(this).siblings().animate({
-                      width: 'toggle'
+                        width: 'toggle'
                     })
                 })
 
                 // $('img').attr('src', response.sprites.back_default);
                 $('.poke').attr('src', response.sprites['versions']['generation-v']['black-white'].animated['back_default']);
-                $('.poke').css('width','300px');
-                $('.poke').css('height','300px');
-        
+                $('.poke').css('width', '300px');
+                $('.poke').css('height', '300px');
+
 
             })
             .fail(function (xhr) {
@@ -82,6 +84,6 @@ $(function () {
 
     })
 
-    
+
 
 });
